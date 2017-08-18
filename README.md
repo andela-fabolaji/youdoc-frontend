@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/andela-fabolaji/youdoc-frontend.svg?style=svg)](https://circleci.com/gh/andela-fabolaji/youdoc-frontend)
+[![CircleCI](https://circleci.com/gh/andela-fabolaji/youdoc-frontend/tree/develop.svg?style=svg)](https://circleci.com/gh/andela-fabolaji/youdoc-frontend/tree/develop)
 
 # YOUDOC
 Youdoc client side implementation.
