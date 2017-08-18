@@ -21,7 +21,7 @@ You need to install node on your machine to get started
  * Create an domain alias in your /etc/hosts file
   ```sudo vim /etc/hosts``` opens your /etc/hosts for editing using vim.
   To edit it, get into insert mode by pressing ```shift i``` key and put these
-   ```127.0.0.1       youdoc``` after the last line.
+   ```127.0.0.1       youdoc.app``` after the last line.
 
  * Finally use this command to run your node server and start the project on you browser.
    ```$ npm start```
