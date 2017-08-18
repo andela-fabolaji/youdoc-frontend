@@ -1,4 +1,3 @@
-# youdoc-frontend
 [![CircleCI](https://circleci.com/gh/andela-fabolaji/youdoc-frontend.svg?style=svg)](https://circleci.com/gh/andela-fabolaji/youdoc-frontend)
 
 # YOUDOC
@@ -17,7 +16,7 @@ You need to install node on your machine to get started
    ```$ cd youdoc-frontend```
 
  * Install dependencies
-  ``` $ yarn install```
+  ``` $ npm install```
 
  * Create an domain alias in your /etc/hosts file
   ```sudo vim /etc/hosts``` opens your /etc/hosts for editing using vim.
@@ -29,7 +28,7 @@ You need to install node on your machine to get started
 
 ## Running the tests
 This is how you will run the tests for the system:
- ```$ yarn test```
+ ```$ npm test```
 
 ## Technologies
 * [React](https://facebook.github.io/react/)
