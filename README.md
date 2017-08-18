@@ -1,8 +1,6 @@
 # youdoc-frontend
 [![CircleCI](https://circleci.com/gh/andela-fabolaji/youdoc-frontend.svg?style=svg)](https://circleci.com/gh/andela-fabolaji/youdoc-frontend)
 
-[![CircleCI](https://circleci.com/gh/andela/learning-map-front.svg?style=svg)](https://circleci.com/gh/andela/learning-map-front)
-
 # YOUDOC
 Youdoc client side implementation.
 
@@ -27,19 +25,13 @@ You need to install node on your machine to get started
    ```127.0.0.1       youdoc``` after the last line.
 
  * Finally use this command to run your node server and start the project on you browser.
-   ```$ yarn start```
+   ```$ npm start```
 
 ## Running the tests
 This is how you will run the tests for the system:
  ```$ yarn test```
 
-## Built With
-* [React](https://facebook.github.io/react/) - The Javascript library used
+## Technologies
+* [React](https://facebook.github.io/react/)
 * [NodeJS](https://nodejs.org/en/)
-* [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) - The CSS preprocessor used
-
-## Contributions
-Contributions should adhere to the guidelines in the:
-- [Engineering Playbook](https://github.com/andela/engineering-playbook/wiki/Conventions)
-- [Airbnb for React](https://github.com/airbnb/javascript/tree/master/react)
-- [Airbnb for ES6 or  ES7](https://github.com/airbnb/javascript)
+* [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
