@@ -23,17 +23,25 @@ if (env === 'development') {
   }));
 
   app.use(webpackHotMiddleware(compiler));
+  
+  app.use(express.static(path.join(__dirname, 'public')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './src/index.html'));
+  });
 } else {
   app.use(compression());
   app.use(express.static(path.join(__dirname, 'dist')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './dist/index.html'));
+  });
 }
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './src/index.html'));
-});
+
 
 app.listen(port, (err) => {
-  err ? winston.log(err) : open(`http://localhost:${port}`);
+  err ? winston.log(err) : open(`youdoc.app:${port}`);
 });
 
 

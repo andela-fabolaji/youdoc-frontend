@@ -1,0 +1,48 @@
+@import '../../styles/partials/base';
+
+.header-line {
+  background: $primary;
+  height: 3px;
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-wrapper {
+  height: 103px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  .logo-holder, .nav-holder {
+    width: 50%;
+  }
+
+  .nav-holder nav {
+    a {
+      text-decoration: none;
+      color: $b;
+      display: block;
+      height: 45px;
+      padding: 0 10px;
+      line-height: 45px;
+      border: 2px solid #DFDFDF;
+      border-radius: 3px;
+      float: right;
+      font-size: 13px;
+    }
+  }
+
+  .nav-holder nav {
+    &:hover a {
+      background: $primary;
+      border-color: $primary;
+      color: $w;
+    }
+  }
+}
