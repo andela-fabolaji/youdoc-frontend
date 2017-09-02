@@ -1,0 +1,15 @@
+@import '../../styles/partials/colors';
+
+.tbox {
+  height: 40px;
+  width: 300px;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  border-bottom: 2px solid $tbox-border;
+
+  &:focus {
+    border-bottom-width: 2px;
+    border-bottom-color: $primary;
+  }
+}
