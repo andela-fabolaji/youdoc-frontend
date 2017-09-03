@@ -1,0 +1,140 @@
+@import '../../styles/partials/base';
+
+
+// home header
+
+.header-line {
+  background: $primary;
+  height: 3px;
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-wrapper {
+  height: 103px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  .logo-holder, .nav-holder {
+    width: 50%;
+  }
+
+  .nav-holder nav {
+    a {
+      text-decoration: none;
+      color: $b;
+      display: block;
+      height: 45px;
+      padding: 0 10px;
+      line-height: 45px;
+      border: 2px solid #DFDFDF;
+      border-radius: 3px;
+      float: right;
+      font-size: 13px;
+    }
+  }
+
+  .nav-holder nav {
+    &:hover a {
+      background: $primary;
+      border-color: $primary;
+      color: $w;
+    }
+  }
+}
+
+
+// button
+
+.btn {
+  outline: none;
+  border: 0; 
+  background: $primary;
+}
+
+.signup-btn {
+  height: 50px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: 400;
+  color: $w;
+  margin-top: 33px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 6px 16px 1px rgba(0,0,0,0.2);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// text-box 
+
+.form-control {
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 33;
+  height: 40px;
+  font-size: 12px;
+  position: relative;
+
+  .label {
+    position: absolute;
+    font-size: 14px;
+    top: 10px;
+    left: 5px;
+    transition: all .4s;
+  }
+
+  &:hover .label {
+    top: -10px;
+    left: -2px;
+    font-size: 11px;
+    color: $primary;
+  }
+}
+
+.tbox {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  background: none;
+  border-bottom: 2px solid $tbox-border;
+  padding: 0 5px;
+  cursor: text;
+  transition: border-bottom-color .5s linear .1s;
+
+  &:focus {
+    border-bottom-width: 2px;
+    border-bottom-color: $primary;
+  }
+
+  &::after {
+    content: 'some content';
+  }
+}
+

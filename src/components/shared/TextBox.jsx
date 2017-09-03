@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './TextBox.scss';
+import './shared.scss';
 
 const TextBox = (props) => { 
   return (
-    <div>
-      <div><label htmlFor={props.id}>{props.label}</label></div>
-      <input
+    <div className="form-control">
+       <div className="label"><label htmlFor={props.id}>{props.label}</label></div>  
+       <input
         type={props.type}
-        placeholder={props.placeholder}
         id={props.id}
         name={props.name}
         className="tbox"
-      />
+      /> 
     </div>
   );
 };

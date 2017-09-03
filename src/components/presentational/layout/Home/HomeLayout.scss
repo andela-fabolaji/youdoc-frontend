@@ -1,9 +1,88 @@
 @import '../../../../styles/partials/base';
 
 .main {
+  box-sizing: border-box;
   width: 100%;
-  height: 100px;
-  background: orange;
+  padding: 0 100px;
+  display: flex;
+  text-align: center;
+  
+  @include breakpoints(handhelds) {
+    flex-direction: column;
+  }
+
+  @include breakpoints(mediumscreens) {
+    flex-direction: row;
+  }
+}
+
+.left-layout, .right-layout {
+  @include breakpoints(mediumscreens) {
+    width: 50%; 
+  }
+}
+
+.left-layout {
+  text-align: center;
+
+  .intro {
+    float: right;
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      margin: 0 auto;
+    }
+  }
+
+  .divider {
+    height: 3px;
+    width: 100px;
+    background: $primary;
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 50px;
+  }
+
+  .pitch-text {
+    padding: 50px 0 10px;
+    line-height: 2rem;
+  }
+
+  .icons {
+    padding-top: 50px;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      float: left;
+      width: 100px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    li div {
+      height: 50px;
+    }
+  }
+  
+}
+
+.right-layout {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 50px;
 }
