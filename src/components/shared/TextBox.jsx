@@ -11,6 +11,8 @@ const TextBox = (props) => {
         id={props.id}
         name={props.name}
         className="tbox"
+        value={props.value}
+        onChange={props.onChange}
       /> 
     </div>
   );
@@ -21,7 +23,9 @@ TextBox.propTypes = {
   id: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default TextBox;

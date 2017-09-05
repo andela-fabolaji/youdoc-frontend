@@ -18,13 +18,14 @@ class FormComponent extends Component {
     this.setState({ showSignIn: !this.state.showSignIn });
   }
 
-  submitForm() {  
+  submitForm(e) {  
+    e.preventDefault();
     console.log('submitted');
   }
 
   render () {
-    const signinForm = <SigninForm switchForm={this.switchForm} submitForm={this.submitForm}/>;
-    const signupForm = <SignupForm switchForm={this.switchForm} submitForm={this.submitForm}/>;
+    const signinForm = <SigninForm switchForm={this.switchForm}/>;
+    const signupForm = <SignupForm switchForm={this.switchForm}/>;
 
     let currentForm = this.state.showSignIn ? signinForm: signupForm;
 

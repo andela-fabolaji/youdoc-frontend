@@ -7,6 +7,7 @@ import './shared.scss';
 const Button = (props) => {
   return (
     <button
+      type={props.type}
       onClick={props.onClick}
       className="btn signup-btn">
       {props.label}
@@ -15,6 +16,7 @@ const Button = (props) => {
 }
 
 Button.propTypes = {
+  type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 };
