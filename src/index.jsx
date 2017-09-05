@@ -1,16 +1,12 @@
 import 'babel-polyfill';
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { render } from 'react-dom';
-import TestComponent  from './TestComponent';
 
-class App extends Component {
-  render () {
-    return (
-      <TestComponent labelOn="on" labelOff="off"/>
-    );
-  }
-}
+import App from './components/App';
+import './styles/app.scss';
 
 render(
-  <App />, document.querySelector('#app')
+  <App />,
+  document.querySelector('#app')
 );

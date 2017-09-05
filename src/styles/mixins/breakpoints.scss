@@ -1,0 +1,14 @@
+$small: 480px;
+$large: 1024px;
+
+@mixin breakpoints($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == mediumscreens {
+    @media only screen and (min-width: $small + 1) { @content; }
+  }
+  @else if $media == largescreens {
+    @media only screen and (min-width: $large) { @content; }
+  }
+}

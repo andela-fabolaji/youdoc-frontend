@@ -1,0 +1,30 @@
+@import '../../styles/partials/base';
+
+.form-header {
+  border-bottom: 1px solid $tbox-border;
+  padding: 20px 26px;
+  text-align: left;
+
+  > span {
+    display: block;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .info {
+    margin-top: 5px;
+    color: $ft-grey;
+    font-size: 12px;
+  }
+
+  .signup-link {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: $b;
+    }
+  }
+}

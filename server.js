@@ -21,19 +21,18 @@ if (env === 'development') {
     publicPath: config.output.publicPath,
     noInfo: true,
   }));
-
   app.use(webpackHotMiddleware(compiler));
 } else {
   app.use(compression());
-  app.use(express.static(path.join(__dirname, 'dist')));
 }
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './src/index.html'));
+  res.sendFile(path.resolve(__dirname, 'src/index.html'));
 });
 
 app.listen(port, (err) => {
-  err ? winston.log(err) : open(`http://localhost:${port}`);
+  err ? winston.log(err) : open(`youdoc.app:${port}`);
 });
 
 

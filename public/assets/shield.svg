@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="51px" viewBox="0 0 44 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>shield</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Landscape" transform="translate(-328.000000, -425.000000)" fill="#419BF9">
+            <g id="Group-2" transform="translate(80.000000, 165.000000)">
+                <g id="shield" transform="translate(248.000000, 260.644661)">
+                    <g id="Capa_1">
+                        <path d="M21.969697,50 C21.8787879,50 21.7893939,49.9833333 21.7045455,49.9515152 C21.4954545,49.8742424 0.757575758,41.8393939 0.757575758,18.1030303 L0.757575758,0.757575758 C0.757575758,0.339393939 1.0969697,0 1.51515152,0 L42.4242424,0 C42.8424242,0 43.1818182,0.339393939 43.1818182,0.757575758 L43.1818182,18.1030303 C43.1818182,41.8393939 22.4439394,49.8727273 22.2348485,49.9515152 C22.15,49.9833333 22.0606061,50 21.969697,50 Z M2.27272727,1.51515152 L2.27272727,18.1030303 C2.27272727,39.3545455 19.6,47.4227273 21.969697,48.4242424 C24.3378788,47.419697 41.6666667,39.3257576 41.6666667,18.1030303 L41.6666667,1.51515152 L2.27272727,1.51515152 Z" id="Shape"></path>
+                    </g>
+                    <path d="M17,21 L17,13 L13,13 L13,23 L13,25 L31,25 L31,21 L17,21 Z" id="Combined-Shape" transform="translate(22.000000, 19.000000) rotate(-45.000000) translate(-22.000000, -19.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
