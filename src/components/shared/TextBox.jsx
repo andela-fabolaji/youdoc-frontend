@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import './shared.scss';
 
-const TextBox = (props) => { 
+const TextBox = props => { 
   return (
     <div className="form-control">
        <div className="label"><label htmlFor={props.id}>{props.label}</label></div>  

@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
 import './shared.scss';
 
-const HomeHeader = (props) => {
-  return(
+const HomeHeader = props => {
+  return (
     <div>
-      <div className="header-line"></div>
+      <div className="header-line"/>
       <div className="nav-wrapper">
         <div className="logo-holder">
           <Link to="/"><img className="logo" src={props.image}/></Link>

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import SigninForm from '../../container/SigninForm';
 import SignupForm from '../../container/SignupForm';
 
-import './FormComponent.scss';
+import './formcomponent.scss';
 
-class FormComponent extends Component {
-
+class FormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,11 +16,6 @@ class FormComponent extends Component {
 
   switchForm () {
     this.setState({ showSignIn: !this.state.showSignIn });
-  }
-
-  submitForm(e) {  
-    e.preventDefault();
-    console.log('submitted');
   }
 
   render () {

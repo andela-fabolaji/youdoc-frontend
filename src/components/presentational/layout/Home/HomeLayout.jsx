@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import HomeHeader from '../../../shared/HomeHeader';
 import FormComponent from '../../form/FormComponent';
 import logo from '../../../../../public/assets/logo.png';
@@ -6,9 +7,9 @@ import shield from '../../../../../public/assets/shield.svg';
 import dumbbell from '../../../../../public/assets/dumbbell.svg';
 import rocket from '../../../../../public/assets/rocket-ship.svg';
 
-import './HomeLayout.scss';
+import './home.scss';
 
-class HomeLayout extends Component {
+class HomeLayout extends React.Component {
   render () {
     return (
       <div>

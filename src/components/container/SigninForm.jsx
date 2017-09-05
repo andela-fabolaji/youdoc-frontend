@@ -1,39 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 import TextBox from '../shared/TextBox';
 import Button from '../shared/Button';
 
-import { SigninProps } from '../../utils/form-input';
+import { SigninProps } from '../../utils/formInput';
 import './form.scss';
 
 class SigninForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      userIdentity: '',
       password: '',
     };
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-    this.baseUrl = 'https://youdoc.herokuapp.com/users/login'
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.user = {};
   }
 
-  onChange (e) {
+  handleChange (event) {
     this.setState({
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     });
   }
 
-  onSubmit (e) {
-    e.preventDefault();
-    const data = {
-      userIdentity: this.state.username,
-      password: this.state.password
-    };
-    axios.post(this.baseUrl, data)
-      .then(res => console.log(res));
+  handleSubmit (event) {
+    event.preventDefault();
   }
 
   render () {

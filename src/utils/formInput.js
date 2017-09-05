@@ -2,12 +2,12 @@ export function SigninProps(context) {
   const signinInputFields = [
     {
       type: 'text',
-      name: 'username',
+      name: 'userIdentity',
       id: 'username',
-      placeholder: 'Enter your username',
-      label: 'Username',
-      value: context.state.username,
-      onChange: context.onChange
+      placeholder: 'Enter your username or email',
+      label: 'Username or email',
+      value: context.state.userIdentity,
+      onChange: context.handleChange
     },
     {
       type: 'password',
@@ -16,13 +16,13 @@ export function SigninProps(context) {
       placeholder: 'password',
       label: 'Password',
       value: context.state.password,
-      onChange: context.onChange
+      onChange: context.handleChange
     }
   ];
 
   const submitButtonProps = {
     type: 'submit',
-    onClick: context.onSubmit,
+    onClick: context.handleSubmit,
     label:'Sign in toh bad'
   };
 
@@ -38,7 +38,7 @@ export function SignupProps(context) {
       placeholder: 'Firstname',
       label: 'Firstname',
       value: context.state.firstName,
-      onChange: context.onChange
+      onChange: context.handleChange
     },
     {
       type: 'text',
@@ -47,7 +47,7 @@ export function SignupProps(context) {
       placeholder: 'Lastname',
       label: 'Lastname',
       value: context.state.lastName,
-      onChange: context.onChange
+      onChange: context.handleChange
     },
     {
       type: 'text',
@@ -56,7 +56,7 @@ export function SignupProps(context) {
       placeholder: 'email',
       label: 'Email',
       value: context.state.email,
-      onChange: context.onChange
+      onChange: context.handleChange
     },
     {
       type: 'text',
@@ -65,7 +65,7 @@ export function SignupProps(context) {
       placeholder: 'Enter your username',
       label: 'Username',
       value: context.state.username,
-      onChange: context.onChange
+      onChange: context.handleChange
     },
     {
       type: 'password',
@@ -74,22 +74,13 @@ export function SignupProps(context) {
       placeholder: 'password',
       label: 'Password',
       value: context.state.password,
-      onChange: context.onChange
-    },
-    {
-      type: 'hidden',
-      name: 'roleId',
-      id: '',
-      placeholder: '',
-      label: '',
-      value: 5,
-      onChange: () => {}
+      onChange: context.handleChange
     }
   ];
 
   const submitButtonProps = {
     type: 'submit',
-    onClick: context.onSubmit,
+    onClick: context.handleSubmit,
     label:'Sign up'
   };
 
