@@ -23,7 +23,6 @@ export function SigninProps(context) {
   const submitButtonProps = {
     type: 'submit',
     onClick: context.handleSubmit,
-    label:'Sign in toh bad'
   };
 
   return { signinInputFields, submitButtonProps };
@@ -80,8 +79,7 @@ export function SignupProps(context) {
 
   const submitButtonProps = {
     type: 'submit',
-    onClick: context.handleSubmit,
-    label:'Sign up'
+    onClick: context.handleSubmit
   };
 
   return { signupInputFields, submitButtonProps };

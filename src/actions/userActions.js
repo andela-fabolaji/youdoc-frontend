@@ -1,16 +1,16 @@
 import { userActionTypes as types } from './actionTypes';
 
 // action creators
-export const login = (payload) => {
+export const signin = (payload) => {
   return {
-    type: types.LOGIN,
+    type: types.SIGNIN,
     payload
   };
 };
 
 export const signup = (payload) => {
   return {
-    type: types.CREATE,
+    type: types.SIGNUP,
     payload
   };
 };

@@ -1,8 +1,8 @@
 import keymirror from 'keymirror-js';
 
 const userActions = [
-  'CREATE',
-  'LOGIN',
+  'SIGNUP',
+  'SIGNIN',
   'LOGOUT'
 ];
 
