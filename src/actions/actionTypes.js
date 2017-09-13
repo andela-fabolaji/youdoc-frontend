@@ -1,16 +1,12 @@
 import keymirror from 'keymirror-js';
 
-const userActions = [
+const actionTypes = [
   'SIGNUP',
   'SIGNIN',
-  'LOGOUT'
+  'LOGOUT',
+  'CREATE_DOC',
+  'EDIT_DOC',
+  'DELETE_DOC'
 ];
 
-const docActions = [
-  'CREATE',
-  'EDIT',
-  'DELETE'
-];
-
-export const userActionTypes = keymirror(userActions);
-export const docActionTypes = keymirror(docActions);
+export default keymirror(actionTypes);

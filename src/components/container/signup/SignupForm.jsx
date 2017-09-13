@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { signupUser } from '../../../dispatchers/userDispatcher';
 
-import TextBox from '../shared/TextBox';
-import Button from '../shared/Button';
-import Loader from '../shared/Loader';
+import TextBox from '../../shared/TextBox';
+import Button from '../../shared/Button';
+import Loader from '../../shared/Loader';
 
-import { SignupProps } from '../../utils/formInput';
-import './form.scss';
+import { SignupProps } from '../../../utils/formInput';
+import '../form.scss';
 
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      username: '',
-      password: '',
-      roleId: 5
+      userDetails: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        username: '',
+        password: '',
+        roleId: 5
+      },
+      loading: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,6 +36,7 @@ class SignupForm extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault();
+    this.props.signupUser(this.state.userDetails);
   }
 
   render () {
@@ -58,4 +63,16 @@ SignupForm.propTypes = {
   switchForm: PropTypes.func.isRequired
 };
 
-export default SignupForm;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    user: state.user
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    signupUser: userDetails => dispatch(signupUser(userDetails))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);

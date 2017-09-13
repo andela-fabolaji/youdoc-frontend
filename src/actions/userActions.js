@@ -1,22 +1,23 @@
-import { userActionTypes as types } from './actionTypes';
+import actionTypes from './actionTypes';
 
-// action creators
-export const signin = (payload) => {
+const { SIGNUP, SIGNIN, LOGOUT } = actionTypes;
+
+export const signIn = (payload) => {
   return {
-    type: types.SIGNIN,
+    type: SIGNIN,
     payload
   };
 };
 
-export const signup = (payload) => {
+export const signUp = (payload) => {
   return {
-    type: types.SIGNUP,
+    type: SIGNUP,
     payload
   };
 };
 
-export const logout = () => {
+export const logOut = () => {
   return {
-    type: types.LOGOUT
+    type: LOGOUT
   };
 };

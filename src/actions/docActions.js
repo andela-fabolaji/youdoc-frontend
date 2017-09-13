@@ -1,22 +1,24 @@
-import { docActionTypes as types } from './actionTypes';
+import actionTypes from './actionTypes';
 
-// action creators
+const { CREATE_DOC, EDIT_DOC, DELETE_DOC } = actionTypes;
+
 export const createDoc = (payload) => {
   return {
-    type: types.CREATE,
+    type: CREATE_DOC,
     payload
   };
 };
 
 export const editDoc = (payload) => {
   return {
-    type: types.EDIT,
+    type: EDIT_DOC,
     payload
   };
 };
 
-export const deleteDoc = () => {
+export const deleteDoc = (id) => {
   return {
-    type: types.DELETE
+    type: DELETE_DOC,
+    id
   };
 };

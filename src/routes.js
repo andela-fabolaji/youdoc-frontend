@@ -10,7 +10,7 @@ const routes = (
       <Route path="/" exact component={HomeLayout}/>
       <Route path="/about" component={About}/>
       <Route path="/dashboard" component={DashboardLayout}/>
-      <Redirect to="/"/>
+      <Route render={() => <p>Page Not found</p>}/>
     </Switch>
   </Router>
 );

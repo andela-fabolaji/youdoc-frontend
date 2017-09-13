@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SigninForm from '../../container/SigninForm';
-import SignupForm from '../../container/SignupForm';
+import SignupForm from '../../container/signup/SignupForm';
 
 import './formcomponent.scss';
 
