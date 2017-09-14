@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { signupUser } from '../../../dispatchers/userDispatcher';
+import { signupUser } from '../../../thunks/userDispatcher';
 
 import TextBox from '../../shared/TextBox';
 import Button from '../../shared/Button';
@@ -15,11 +15,11 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       userDetails: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        username: '',
-        password: '',
+        firstName: 'femi',
+        lastName: 'abolaji',
+        email: 'femi.systems@gmail.com',
+        username: 'femipixels',
+        password: 'password',
         roleId: 5
       },
       loading: false
@@ -29,8 +29,13 @@ class SignupForm extends React.Component {
   }
 
   handleChange (event) {
+    // console.log(event.target.name, event.target.value);
+    event.persist();
     this.setState({
-      [event.target.name]: event.target.value
+      userDetails: Object.assign({}, this.state.userDetails, {
+        [event.target.name]: event.target.value
+      }),
+      loading: false
     });
   }
 
@@ -50,6 +55,7 @@ class SignupForm extends React.Component {
           <span className="info">I have an account <span onClick={this.props.switchForm} className="signup-link">Sign in</span></span>
         </div>
         {signupInputFields.map(inputProps => <TextBox key={inputProps.name} {...inputProps} />)}
+        {this.props.user.error || null}
         <Button {...submitButtonProps} loading={isLoading}>
           {isLoading && <Loader/>}
           {!isLoading && 'Sign up'}
@@ -74,5 +80,9 @@ const mapDispatchToProps = dispatch => {
     signupUser: userDetails => dispatch(signupUser(userDetails))
   };
 };
+
+// const mapDispatchToProps = {
+//   signupUser
+// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);

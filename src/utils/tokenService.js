@@ -1,10 +1,19 @@
 import jwtDecode from 'jwt-decode';
 
-export const getToken = tokenName => localStorage.getItem(tokenName);
+const getToken = () => {
+  return localStorage.getItem('token');
+};
 
-export const getDecodedToken = tokenName => jwtDecode(getToken(tokenName));
+const getDecodedToken = () => {
+  return jwtDecode(getToken('token'));
+};
 
-export const setToken = (token) => {
-  localStorage.setItem(token);
-  return true;
+const setToken = token => {
+  return localStorage.setItem('token', token);
+};
+
+export default {
+  getToken,
+  getDecodedToken,
+  setToken
 };

@@ -14,7 +14,7 @@ class SigninForm extends React.Component {
     this.state = {
       userIdentity: '',
       password: '',
-      loading: true,
+      loading: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

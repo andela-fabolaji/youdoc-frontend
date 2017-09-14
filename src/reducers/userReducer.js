@@ -1,11 +1,15 @@
 const userReducer = (state = {}, action) => {
-  const { type, payload } = action;
+  const { type } = action;
 
   switch(type) {
-    case 'SIGNUP':
+    case 'SIGNUP_SUCCESSFUL':
       return Object.assign({}, state, {
-        user: payload
+        user: action.user
       });
+    case 'SIGNUP_FAIL':
+      return Object.assign({}, state, {
+        error: action.error
+      })
     default: return state;
   }
 };

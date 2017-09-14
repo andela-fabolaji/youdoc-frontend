@@ -22,7 +22,7 @@ class FormComponent extends React.Component {
     const signinForm = <SigninForm switchForm={this.switchForm}/>;
     const signupForm = <SignupForm switchForm={this.switchForm}/>;
 
-    let currentForm = this.state.showSignIn ? signinForm: signupForm;
+    let currentForm = this.state.showSignIn ? signupForm: signinForm;
 
     return (
       <div className="form-component">{currentForm}</div>
