@@ -3,21 +3,33 @@ import PropTypes from 'prop-types';
 
 import './shared.scss';
 
-const Button = props => {
-  return (
-    <button
-      type={props.type}
-      onClick={props.onClick}
-      className="btn signup-btn">
-      {props.label}
-    </button>
-  );
+const style = {
+  loading: {
+    background: '#82C9FF'
+  }
 };
 
-Button.propTypes = {
+const ButtonComponent = ({ type, onClick, loading, children }) => (
+  <button
+    type={type}
+    onClick={onClick}
+    className="btn signup-btn"
+    disabled={loading}
+    style={loading? style.loading: null}
+    >
+    {children}
+  </button>
+);
+
+ButtonComponent.propTypes = {
   type: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired
 };
 
-export default Button;
+ButtonComponent.defaultProps = {
+  loading: false
+};
+
+export default ButtonComponent;

@@ -1,0 +1,29 @@
+import keymirror from 'keymirror-js';
+
+const actionTypes = [
+  'CREATE_USER_SUCCESS',
+  'CREATE_USER_FAIL',
+  'SIGNIN_SUCCESS',
+  'SIGNIN_FAIL',
+  'LOGOUT_SUCCESS',
+  'LOGOUT_FAIL',
+  'CREATE_DOC',
+  'CREATE_DOC_SUCCESS',
+  'CREATE_DOC_FAIL',
+  'EDIT_DOC_SUCCESS',
+  'EDIT_DOC_FAIL',
+  'DELETE_DOC_SUCCESS',
+  'DELETE_DOC_FAIL',
+  'LOAD_DOCS_SUCCESS',
+  'LOAD_DOCS_FAIL',
+  'GET_DOC_SUCCESS',
+  'GET_DOC_FAIL',
+  'CREATE_ROLE_SUCCESS',
+  'CREATE_ROLE_FAIL',
+  'LOAD_ALL_USERS_SUCCESS',
+  'LOAD_ALL_USERS_FAIL',
+  'LOAD_USER_SUCCESS',
+  'LOAD_USER_FAIL'
+];
+
+export default keymirror(actionTypes);

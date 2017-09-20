@@ -23,7 +23,6 @@ export function SigninProps(context) {
   const submitButtonProps = {
     type: 'submit',
     onClick: context.handleSubmit,
-    label:'Sign in toh bad'
   };
 
   return { signinInputFields, submitButtonProps };
@@ -37,7 +36,7 @@ export function SignupProps(context) {
       id: 'firstName',
       placeholder: 'Firstname',
       label: 'Firstname',
-      value: context.state.firstName,
+      value: context.state.userDetails.firstName,
       onChange: context.handleChange
     },
     {
@@ -46,7 +45,7 @@ export function SignupProps(context) {
       id: 'lastName',
       placeholder: 'Lastname',
       label: 'Lastname',
-      value: context.state.lastName,
+      value: context.state.userDetails.lastName,
       onChange: context.handleChange
     },
     {
@@ -55,7 +54,7 @@ export function SignupProps(context) {
       id: 'email',
       placeholder: 'email',
       label: 'Email',
-      value: context.state.email,
+      value: context.state.userDetails.email,
       onChange: context.handleChange
     },
     {
@@ -64,7 +63,7 @@ export function SignupProps(context) {
       id: 'username',
       placeholder: 'Enter your username',
       label: 'Username',
-      value: context.state.username,
+      value: context.state.userDetails.username,
       onChange: context.handleChange
     },
     {
@@ -73,15 +72,14 @@ export function SignupProps(context) {
       id: 'password',
       placeholder: 'password',
       label: 'Password',
-      value: context.state.password,
+      value: context.state.userDetails.password,
       onChange: context.handleChange
     }
   ];
 
   const submitButtonProps = {
     type: 'submit',
-    onClick: context.handleSubmit,
-    label:'Sign up'
+    onClick: context.handleSubmit
   };
 
   return { signupInputFields, submitButtonProps };

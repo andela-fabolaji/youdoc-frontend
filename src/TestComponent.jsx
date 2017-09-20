@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class TestComponent extends Component {
+export default class TestComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isChecked: false };
@@ -21,6 +22,11 @@ export default class TestComponent extends Component {
         />
         {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
       </label>
-    )
+    );
   }
 }
+
+TestComponent.propTypes = {
+  labelOn: PropTypes.string.isRequired,
+  labelOff: PropTypes.string.isRequired
+};
