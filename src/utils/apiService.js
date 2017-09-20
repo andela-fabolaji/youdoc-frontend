@@ -9,8 +9,13 @@ const apiService = {
         response => response,
         error => error.response
       );
-
   },
+  signIn(payload) {
+    return axios.post('/users', payload)
+      .then(response => {
+        console.log(response);
+      });
+  }
 };
 
 export default apiService;

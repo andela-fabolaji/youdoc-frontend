@@ -74,7 +74,6 @@ export default {
     ]
   },
   resolve: {
-    // you can now require('file') instead of require('file.coffee')
     extensions: [".jsx", ".js", ".scss"]
   }
 }

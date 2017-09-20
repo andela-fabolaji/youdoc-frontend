@@ -1,4 +1,4 @@
-@import '../../../../styles/partials/base';
+@import '../../styles/partials/base';
 
 .main {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
   padding: 0 100px;
   display: flex;
   text-align: center;
-  
+
   @include breakpoints(handhelds) {
     flex-direction: column;
   }
@@ -18,7 +18,7 @@
 
 .left-layout, .right-layout {
   @include breakpoints(mediumscreens) {
-    width: 50%; 
+    width: 50%;
   }
 }
 
@@ -73,7 +73,7 @@
       height: 50px;
     }
   }
-  
+
 }
 
 .right-layout {
@@ -85,4 +85,11 @@
 
 .header {
   height: 50px;
+}
+
+.form-component {
+  background: $light-grey;
+  padding-bottom: 20px;
+  width: 352px;
+  border-radius: 8px;
 }

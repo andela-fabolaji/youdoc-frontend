@@ -11,4 +11,5 @@ test('TestComponent', () => {
   expect(testComp.text()).toEqual('off');
   testComp.find('input').simulate('change');
   expect(testComp.text()).toEqual('on');
+  console.log(testComp.state());
 });

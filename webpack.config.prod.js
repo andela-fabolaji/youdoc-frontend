@@ -12,10 +12,10 @@ export default {
     publicpath: '/',
     filename: 'bundle.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   target: 'web',
   devServer: {
-    contentBase: SRC
+    contentBase: DIST
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,8 +32,6 @@ export default {
         'https://fonts.googleapis.com/css?family=Roboto',
       ]
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')

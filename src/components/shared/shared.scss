@@ -91,6 +91,14 @@
 
 // text-box
 
+.move-label {
+  position: absolute;
+  font-size: 14px;
+  top: 10px;
+  left: 5px;
+  transition: all .4s;
+}
+
 .form-control {
   width: 300px;
   margin: 0 auto;
@@ -131,10 +139,6 @@
   &:focus {
     border-bottom-width: 2px;
     border-bottom-color: $primary;
-  }
-
-  &::after {
-    content: 'some content';
   }
 }
 

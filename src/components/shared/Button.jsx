@@ -9,29 +9,27 @@ const style = {
   }
 };
 
-const Button = props => {
-  return (
-    <button
-      type={props.type}
-      onClick={props.onClick}
-      className="btn signup-btn"
-      disabled={props.loading}
-      style={props.loading? style.loading: null}
-      >
-      {props.children}
-    </button>
-  );
-};
+const ButtonComponent = ({ type, onClick, loading, children }) => (
+  <button
+    type={type}
+    onClick={onClick}
+    className="btn signup-btn"
+    disabled={loading}
+    style={loading? style.loading: null}
+    >
+    {children}
+  </button>
+);
 
-Button.propTypes = {
+ButtonComponent.propTypes = {
   type: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired
 };
 
-Button.defaultProps = {
+ButtonComponent.defaultProps = {
   loading: false
 };
 
-export default Button;
+export default ButtonComponent;

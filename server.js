@@ -34,5 +34,3 @@ app.get('*', (req, res) => {
 app.listen(port, (err) => {
   err ? winston.log(err) : open(`youdoc.app:${port}`);
 });
-
-
